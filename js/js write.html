@@ -1,0 +1,50 @@
+﻿<html>
+	<head>
+		<title>这是标题</title>
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript">
+			document.write("131313</br>");
+			document.write("document 输出了");
+			function changeTxt(){
+				element = document.getElementById("ptxt");
+				element.innerHTML = "js 改变文本";
+			}
+
+			function changeValue(){
+				element = document.getElementById("alett");
+				element.value = "js 改变value"
+			}
+			function changeBackground(){
+				element = document.getElementById("ptxt");
+				element.style.color = "#ff0000";	
+			}
+
+			function arrayOutput() {
+				var array = new Array();
+				array[0] = "数组1";
+				array[1] = "数组2";
+				array[2] = "数组3";
+				for(var i = 0; i < array.length; i++) {
+					document.write(array[i] + "<br />");
+				}
+			}
+		</script>
+	</head>
+	<body  background="#00ff00">
+		<p id="ptxt">这是body开始, 准备用js输出</p>
+		<input id = "name" type="text" name="name" value = "这是内容"><br/><br/>
+		<button id = "alett" name="alert" onclick="alert('hello world ')">alert</button> <br/><br/>
+		<button onclick="changeTxt()">js改变文本内容</button> <br/><br/>
+		<button onclick="changeValue()">js改变输入框文本内容</button> <br/><br/>
+		<button onclick="changeBackground()">js改变背景颜色</button> <br/><br/>
+		<button onclick="arrayOutput()">js 数组输出</button> <br/><br/>
+		<p>这是body结束</p>
+	</body>
+</html>
