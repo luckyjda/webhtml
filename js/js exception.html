@@ -1,0 +1,37 @@
+﻿<html>
+	<head>
+		<title>这是标题</title>
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript">
+			document.write("131313</br>");
+			document.write("document 输出了");
+			function exception(){
+				try{
+					var name = document.getElementById("name");
+					if(name.value == "5") {
+						alert("等于5");
+					}else {
+						throw "不等于5";
+					}
+				}catch(err) {
+					alert(err);
+				}
+			}
+		</script>
+	</head>
+	<body  background="#00ff00">
+		<p id="ptxt">这是body开始, 准备用js输出</p>
+		<input id = "name" type="text" name="name"><br/><br/>
+		<button id = "alett" name="alert" onclick="alert('hello world ')">alert</button> <br/><br/>
+		<button onclick="exception()">捕获异常</button> <br/><br/>
+
+		<p>这是body结束</p>
+	</body>
+</html>

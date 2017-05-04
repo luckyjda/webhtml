@@ -31,8 +31,20 @@
 				array[0] = "数组1";
 				array[1] = "数组2";
 				array[2] = "数组3";
-				for(var i = 0; i < array.length; i++) {
-					document.write(array[i] + "<br />");
+				//for 实现方式
+				// for(var i = 0; i < array.length; i++) {
+				// 	document.write(array[i] + "<br />");
+				// }
+				//for 另外一种实现方式
+				for (x in array) {
+					document.write(array[x] + "<br />");
+				}
+			}
+			function arrayOutput2() {
+				var person = {name:"哈哈", age:19, color:"yellow"}
+				for (x in person) {
+					//相当于便利一个数组
+					document.write(person[x] + "<br />");
 				}
 			}
 		</script>
@@ -45,6 +57,8 @@
 		<button onclick="changeValue()">js改变输入框文本内容</button> <br/><br/>
 		<button onclick="changeBackground()">js改变背景颜色</button> <br/><br/>
 		<button onclick="arrayOutput()">js 数组输出</button> <br/><br/>
+		<button onclick="arrayOutput2()">js for循环对象输出</button> <br/><br/>
+
 		<p>这是body结束</p>
 	</body>
 </html>
