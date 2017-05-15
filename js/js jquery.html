@@ -1,0 +1,33 @@
+﻿<html>
+	<head>
+		<title>这是标题</title>
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+			function sayHello() {
+				//document.getElementById("ptxt").innerHTML = "hello world";
+				$("#ptxt").html("hello chinese");
+			}
+			$(document).ready(function() {
+				$("#txt").click(function(){
+					$("#pcolor").css("background-color", "red");
+				});
+			});
+		</script>
+	</head>
+	<body  background="#00ff00">
+		<p id="ptxt">这是body开始, 准备用js输出</p>
+		<p id="pcolor">改变颜色</p>
+		<button id = "alett" name="alert" onclick="sayHello()">js 点击</button> <br/><br/>
+		<button id = "txt">文本</button> <br/><br/>
+
+		<h1 id="h01"></h1>
+	</body>
+</html>
