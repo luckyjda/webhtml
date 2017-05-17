@@ -15,19 +15,48 @@
 				//document.getElementById("ptxt").innerHTML = "hello world";
 				$("#ptxt").html("hello chinese");
 			}
+			function test() {
+				//document.getElementById("ptxt").innerHTML = "hello world";
+				return "哈哈";
+			}
+			function test2(i,origText){
+				return "哈哈:" + i + " 内容：" + origText ;	
+			}
+
 			$(document).ready(function() {
 				$("#txt").click(function(){
 					$("#pcolor").css("background-color", "red");
+				});
+				$("#getWord").click(function(){
+					console.log("获取文字：", $("#ptxt").text());
+				});
+				$("#getHtml").click(function(){
+					console.log("获取html：", $("#ptxt").html());
+				});
+				$("#getValue").click(function(){
+					console.log("获取html：", $("#getValue").val());
+				});
+				$("#settext").click(function(){
+					console.log("设置text值：", $("#ptxt").text("已经用js设置该值"));
+				});
+				$("#set").click(function(){
+					$("#ptxt").html(function(j, origText2){
+    					return "Old html: " + origText2 + " New html: Hello <b>world!</b>(index: " + j + ")";
+  					});
 				});
 			});
 		</script>
 	</head>
 	<body  background="#00ff00">
-		<p id="ptxt">这是body开始, 准备用js输出</p>
+		<p id="ptxt">这是body开始, 准备用<font color="#ff0000">js</font>输出 </p>
 		<p id="pcolor">改变颜色</p>
 		<button id = "alett" name="alert" onclick="sayHello()">js 点击</button> <br/><br/>
 		<button id = "txt">文本</button> <br/><br/>
-
-		<h1 id="h01"></h1>
+		<button id = "getWord">js获取元素文字</button> <br/><br/>		
+		<button id = "getHtml">js获取元素html内容</button> <br/><br/>	
+		<button id = "getValue" value="按钮value">js获取元素value值</button> <br/><br/>	
+		<button id = "getAttr" value="按钮value" >js获取元素attl值</button> <br/><br/>	
+		<button id = "settext" >js设置text值</button> <br/><br/>	
+		<button id = "set" >js设置text值</button> <br/><br/>	
 	</body>
 </html>
