@@ -1,0 +1,76 @@
+﻿<html>
+	<head>
+		<title>这是标题</title>
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+			function sayHello() {
+				//document.getElementById("ptxt").innerHTML = "hello world";
+				$("#ptxt").html("hello chinese");
+			}
+			function test() {
+				//document.getElementById("ptxt").innerHTML = "hello world";
+				return "哈哈";
+			}
+			function test2(i,origText){
+				return "哈哈:" + i + " 内容：" + origText ;	
+			}
+
+			$(document).ready(function() {
+				$("#appendid").click(function(){
+					$("#p1").append("<font color = 'red'> 哈哈</font>");
+				});
+				$("#appendlistid").click(function(){
+					$("ol").append("<li>List item 4</li>");
+				});
+				$("#prependid").click(function(){
+					$("#p1").prepend("<font color = 'red'> 哈哈</font>");
+				});
+				$("#prependlistid").click(function(){
+					$("ol").prepend("<li>List item 4</li>");
+				});
+				$("#prependlistid").click(function(){
+					$("ol").prepend("<li>List item 4</li>");
+				});
+				$("#beforeid").click(function(){
+					$("#p2").before("<p id=>p2前面项</p>");
+				});
+				$("#afterid").click(function(){
+					$("#p2").after("	<p id=>p2后面项</p>");
+				});
+				$("#beforelistid").click(function(){
+					var txt1="<b>I </b>";                    // 以 HTML 创建元素
+					var txt2=$("<b></b>").text("love ");     // 通过 jQuery 创建元素
+					var txt3=document.createElement("big");  // 通过 DOM 创建元素
+					txt3.innerHTML="jQuery!";
+					$("#p2").before(txt1, txt2, txt3);
+				});
+			});
+		</script>
+	</head>
+	<body  background="#00ff00">
+		<p id="p1">p1</p>
+		<p id="p2">p2</p>
+		<p id="p3">p3</p>
+		<ol>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ol>
+		<button id = "appendid" >append 追加</button> <br/><br/>
+		<button id = "appendlistid" >append 追加 列表</button> <br/><br/>
+		<button id = "prependid" >prepend 插入</button> <br/><br/>
+		<button id = "prependlistid" >prepend 插入 列表</button> <br/><br/>
+		<button id = "beforeid" >before 添加</button> <br/><br/>
+		<button id = "afterid" >afterid 添加</button> <br/><br/>
+
+		<button id = "beforelistid" >before 添加 若干元素</button> <br/><br/>
+	</body>
+</html>
