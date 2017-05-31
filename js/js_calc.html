@@ -1,0 +1,60 @@
+﻿<html>
+	<head>
+		<title>这是标题</title>
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript">
+			function numEqual(){
+				var num = 5;
+				if(num == 5) {
+					alert("数字相等");
+				}else {
+					alert("数字不相等");
+				}
+			}
+			function signEqual(){
+				var num = 5;
+				if(num == "5") {
+					alert("字符相等");
+				}else {
+					alert("字符不相等");
+				}
+			}
+
+			function jueduiEqual(){
+				var num = 5;
+				if(num === "5") {
+					alert("字符绝对相等");
+				}else {
+					alert("字符绝对不相等");
+				}
+			}
+
+			function unEqual(){
+				var num = 5;
+				if(num != "5") {
+					alert("字符相等");
+				}else {
+					alert("字符不相等");
+				}
+			}
+
+	
+		</script>
+	</head>
+	<body  background="#00ff00">
+		测试是否相等<br/><br/>
+		<button onclick="numEqual()">5==5</button> <br/><br/>
+		<button onclick="signEqual()">5=="5"</button> <br/><br/>
+		<button onclick="jueduiEqual()">5==="5"</button> <br/><br/>
+		测试不相等<br/><br/>
+		<button onclick="unEqual()">5!="5"</button> <br/><br/>
+
+	</body>
+</html>

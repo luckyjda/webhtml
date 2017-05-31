@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>这是标题</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript">
+			function getLocation(){
+				document.getElementById("ptxt").innerHTML = "location name:" + location.hostname 
+				+ " <br/>location.href："+ location.href 
+				+ " <br/>location pathname:" + location.pathname ;
+			}
+
+			function reLoad(){
+				location.assign("https:www.baidu.com");
+			}
+		
+		</script>
+	</head>
+	<body  background="#00ff00">
+		结果展示：<br/>
+		<p id="ptxt"></p>
+		<button onclick="getLocation()">location</button> <br/><br/>
+		<button onclick="reLoad()">重新加载页面跳转到别的页面</button> <br/><br/>
+	</body>
+</html>

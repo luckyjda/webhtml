@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>这是标题</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript">
+
+			function showAlert(){
+				alert("这是警告框");
+			}
+
+			function showConfirm(){
+				var result = confirm("这是确认框");
+				if(result) {
+					alert("选择了确定");
+				}else {
+					alert("选择了取消")
+				}
+			}
+
+			function showPrompt(){
+				var name = prompt("标题", "内容编辑");
+				if(name != null && "" != name){
+					alert("输入的内容是：" + name);
+				}
+			}
+		
+		</script>
+	</head>
+	<body  background="#00ff00">
+		结果展示：<br/>
+		<p id="ptxt"></p>
+		<button onclick="showAlert()">显示警告框</button> <br/><br/>
+		<button onclick="showConfirm()">显示确认框</button> <br/><br/>
+		<button onclick="showPrompt()">显示提示框</button> <br/><br/>
+	</body>
+</html>

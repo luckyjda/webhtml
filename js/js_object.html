@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>这是标题</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript">
+			var cat = new Object();
+			cat.name = "hello";
+			cat.color = "yello";
+			function showObject(){
+				var person = {name:"哈哈", age:13, id:"23"};
+				document.getElementById("ptxt").innerHTML = person.name;
+			}
+
+			function newObject(){
+				document.getElementById("ptxt").innerHTML = "name：" + cat.name + " 颜色：" + cat.color;
+			}
+
+			function Dog(name, color){
+				this.name = name;
+				this.color = color;
+				document.getElementById("ptxt").innerHTML = "name：" + this.name + " 颜色：" + this.color;
+			}
+			function showDog(){
+				var dog = new Dog("黑狗", "黑色");
+				document.getElementById("ptxt").innerHTML = "name：" + dog.name + " 颜色：" + dog.color;
+			}
+		</script>
+	</head>
+	<body  background="#00ff00">
+		结果展示：<br/>
+		<p id="ptxt"></p>
+
+		<button onclick="showObject()">funtion生成输出</button> <br/><br/>
+		<button onclick="newObject()">new 全局对象生成 </button> <br/><br/>
+		<button onclick="Dog('狗','黑色')">funtion 构造带参生成对象</button> <br/><br/>
+		<button onclick="showDog()"> 构造带参生成对象</button> <br/><br/>
+
+	</body>
+</html>

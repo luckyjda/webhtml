@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>这是标题</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript">
+			var cat = new Object();
+			cat.name = "hello";
+			cat.color = "yello";
+			function showDate(){
+				var date = new Date();
+				document.getElementById("ptxt").innerHTML = date;
+			}
+
+			function getTime(){
+				var date = new Date();
+				document.getElementById("ptxt").innerHTML = date.getTime();
+			}
+
+			function getDayByChinese(){
+				var date = new Date();
+				var result = "";
+				switch(date.getDay()){
+					case 1:
+						result = "星期一";
+						break;
+					case 2:
+						result = "星期二";
+						break;
+					case 3:
+						result = "星期三";
+						break;
+					case 4:
+						result = "星期四";
+						break;
+					case 5:
+						result = "星期五";
+						break;
+					case 6:
+						result = "星期六";
+						break;
+					case 7:
+						result = "星期日";
+						break;
+				}
+				return result;
+			}
+
+			function getDay(){
+				document.getElementById("ptxt").innerHTML = getDayByChinese();
+			}
+
+			function showAllDate(){
+				var date = new Date();
+				//2017-5-13 22:57
+				var year = date.getYear();
+				var day = date.getDays();
+				var hour = date.getHours();
+				var minute = date.getMinutes();
+				var second = date.getSeconds();
+				document.getElementById("ptxt").innerHTML = year + "-" + day + " " + minute + ":" + second;
+			}
+		</script>
+	</head>
+	<body  background="#00ff00">
+		结果展示：<br/>
+		<p id="ptxt"></p>
+
+		<button onclick="showDate()">显示时间</button> <br/><br/>
+		<button onclick="getTime()">显示时间getTime</button> <br/><br/>
+		<button onclick="getDay()">显示时间getDay</button> <br/><br/>
+		<button onclick="showAllDate()">显示完整时间</button> <br/><br/>
+	</body>
+</html>

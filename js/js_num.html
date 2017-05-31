@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>这是标题</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			h1{
+				color: red
+			}
+			p{
+				color: blue
+			}
+		</style>
+		<script type="text/javascript">
+			function showNum(){
+				var num = 314;
+				var numlimit = 3.14;
+				document.getElementById("ptxt").innerHTML = "输出314:&nbsp;&nbsp;" + num + " 输出3.14：&nbsp;&nbsp;" + numlimit;
+			}
+
+			function NumProper(){
+				var num = new Number(5);
+				document.getElementById("ptxt").innerHTML = "Number.Max_valuse:&nbsp;&nbsp;" + num.Max_valuse + " Number.NEGATIVE_INFINITY：&nbsp;&nbsp;" + num.NEGATIVE_INFINITY;
+			}
+		
+		</script>
+	</head>
+	<body  background="#00ff00">
+		结果展示：<br/>
+		<p id="ptxt"></p>
+
+		<button onclick="showNum()">show 数字和小数点</button> <br/><br/>
+		<button onclick="NumProper()">Number 属性</button> <br/><br/>
+
+	</body>
+</html>
